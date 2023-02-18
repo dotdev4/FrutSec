@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FRUTSEC</title>
+  <title>FrutiSec</title>
   <!-- CSS -->
-  <link rel="stylesheet" href="CSS/index.css">
-  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="../staticFiles/css/index.css">
+  <link rel="stylesheet" href="../staticFiles/css/normalize.css">
   <!-- FUENTE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +22,10 @@
     <!-- NAVBAR -->
     <nav>
       <ul>
-        <li><span class="logo">FRUTSEC</span></li>
+        <li><span class="logo">FrutiSec</span></li>
       </ul>
       <ul>
-        <li><a href="#productos">Productos</a></li>
+        <li><a href={{ url_for("productos") }}>Productos</a></li>
         <li><a href="#sobrenosotros">Nosotros</a></li>
         <li><a href="#contactanos">Contactanos</a></li>
       </ul>
@@ -36,46 +36,38 @@
         <span class="text-header">Una gran variedad
         <br>de las frutas y vegetales mas frescas
         </span></div>
-
-
-
       <!-- IMAGEN DEL TEXTO -->
       <div class="bg-header"></div>
     </div>
     <!-- PRODUCTOS -->
     <div class="cards-container">
-      <h3>PRODUCTOS</h3>
+      <h3 class="cards-container-title">PRODUCTOS</h3>
       <div class="div">
-        <div class="card" id="card">
-          <img src="/IMG/cards/appleygreen.png" alt="Imagen 1">
-          <h3>Título de la tarjeta 1</h3>
-          <p>Descripción de la tarjeta 1</p>
+        <div class="card" id="cards">
+          <img src="../staticFiles/img/cards-index/tienda.png" alt="Imagen 1">
+          <h3>Todos</h3>
         </div>
       </div>
 
       <div class="row">
-        <div class="card">
-          <img src="/IMG/cards/appleygreen.png" alt="Imagen 1">
-          <h3>Título de la tarjeta 1</h3>
-          <p>Descripción de la tarjeta 1</p>
+        <div class="card" id="cards">
+          <img src="../staticFiles/img/cards-index/brote.png" alt="Imagen 1">
+          <h3>Semillas</h3>
         </div>
 
-        <div class="card">
-          <img src="/IMG/cards/appleygreen.png" alt="Imagen 2">
-          <h3>Título de la tarjeta 2</h3>
-          <p>Descripción de la tarjeta 2</p>
+        <div class="card" id="cards">
+          <img src="../staticFiles/img/cards-index/condimento.png" alt="Imagen 2">
+          <h3>Especias</h3>
         </div>
 
-        <div class="card">
-          <img src="/IMG/cards/appleygreen.png" alt="Imagen 3">
-          <h3>Título de la tarjeta 3</h3>
-          <p>Descripción de la tarjeta 3</p>
+        <div class="card" id="cards">
+          <img src="../staticFiles/img/cards-index/fruta.png" alt="Imagen 3">
+          <h3>Frutas</h3>
         </div>
 
-        <div class="card">
-          <img src="/IMG/cards/appleygreen.png" alt="Imagen 4">
-          <h3>Título de la tarjeta 4</h3>
-          <p>Descripción de la tarjeta 4</p>
+        <div class="card" id="cards">
+          <img src="../staticFiles/img/cards-index/verduras.png" alt="Imagen 4">
+          <h3>Verduras</h3>
         </div>
       </div>
     </div>
@@ -109,7 +101,7 @@
 
 
   <!-- importar script -->
-  <script src="JS/index.js"></script>
+  <script src="../staticFiles/index.js"></script>
 </body>
 
 </html>
