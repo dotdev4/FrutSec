@@ -1,0 +1,43 @@
+/* SOBRE NOSOTROS */
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    padding-bottom: 50px;
+    height: 100vh;
+}
+
+.about-container h3 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    background-color: rgb(68, 164, 68);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.434);
+    background-color: rgb(68, 164, 68);
+    box-shadow: 5px 5px 5px 0 rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.about-container h3:hover {
+    transform: translateY(-5px);
+}
+
+.about-container p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    width: 80%;
+    padding: 50px 50px;
+    background-color: rgb(55, 57, 59);
+    color: white;
+    line-height: 25px;
+}
+
+.about-container p span{
+    color: rgb(68, 164, 68);
+}

@@ -9,7 +9,8 @@ from flask import jsonify
 
 engine = sqlalchemy.create_engine('sqlite:///database.db')
 
-base = declarative_base(bind=engine)
+base = declarative_base()
+base.metadata.create_all(bind=engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()

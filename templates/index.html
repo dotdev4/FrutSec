@@ -7,14 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FrutiSec</title>
   <!-- CSS -->
-  <link rel="stylesheet" href="../staticFiles/css/index.css">
+  <link rel="stylesheet" href="../staticFiles/css/about.css">
+  <link rel="stylesheet" href="../staticFiles/css/header.css">
   <link rel="stylesheet" href="../staticFiles/css/normalize.css">
+  <link rel="stylesheet" href="../staticFiles/css/products.css">
+  <link rel="stylesheet" href="../staticFiles/css/footer.css">
+  
   <!-- FUENTE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"/>
 </head>
 
 <body>
@@ -26,11 +30,15 @@
       </ul>
       <ul>
         <li><a href={{ url_for("productos") }}>Productos</a></li>
+        
         <li><a href="#sobrenosotros">Nosotros</a></li>
+        
         <li><a href="#contactanos">Contactanos</a></li>
+        
       </ul>
     </nav>
     <!-- HEADER -->
+
     <div class="header-container">
       <div class="text-span-container">
         <span class="text-header">Una gran variedad
@@ -39,6 +47,7 @@
       <!-- IMAGEN DEL TEXTO -->
       <div class="bg-header"></div>
     </div>
+
     <!-- PRODUCTOS -->
     <div class="cards-container">
       <h3 class="cards-container-title">PRODUCTOS</h3>
@@ -74,28 +83,39 @@
     <!-- ABOUT -->
     <div class="about-container">
       <h3>SOBRE NOSOTROS</h3>
-      <p>Bienvenidos a FrutSec, tu tienda de confianza para encontrar la mejor selección de frutas frescas,
-        semillas y verduras en Bogotá. En FrutSec nos enorgullece ofrecer productos de alta calidad y siempre
+      <p>Bienvenidos a <span>FrutSec</span>, tu tienda de confianza para encontrar la mejor selección de frutas frescas,
+        semillas y verduras en Bogotá. En <span>FrutSec</span> nos enorgullece ofrecer productos de alta calidad y siempre
         frescos, provenientes de productores locales y nacionales que comparten nuestros valores de
-        sostenibilidad y respeto por el medio ambiente.
+        sostenibilidad y respeto por el medio ambiente. <br> <br>
 
-        En FrutSec, creemos que una alimentación saludable es esencial para llevar una vida plena y feliz. Por
+        En <span>FrutSec</span>, creemos que una alimentación saludable es esencial para llevar una vida plena y feliz. Por
         eso, nuestro compromiso es ofrecer una amplia variedad de productos frescos y nutritivos para toda la
         familia. Ya sea que busques ingredientes para tus recetas favoritas, o simplemente quieras mantener una
-        alimentación balanceada, en FrutSec encontrarás todo lo que necesitas.
+        alimentación balanceada, en <span>FrutSec</span> encontrarás todo lo que necesitas.
+        <br> <br>
 
-        Además de nuestra amplia selección de frutas, semillas y verduras frescas, en FrutSec también
+        Además de nuestra amplia selección de frutas, semillas y verduras frescas, en <span>FrutSec</span> también
         encontrarás una atención personalizada por parte de nuestro equipo de expertos en alimentación
         saludable, quienes estarán siempre dispuestos a asesorarte en tus compras y ayudarte a encontrar los
         productos que mejor se adapten a tus necesidades.
+        <br><br>
 
-        En resumen, en FrutSec estamos comprometidos con tu bienestar y el del planeta, ofreciendo productos de
+        En resumen, en <span>FrutSec</span> estamos comprometidos con tu bienestar y el del planeta, ofreciendo productos de
         alta calidad y siempre frescos, acompañados de una atención personalizada y un enfoque en la
         sostenibilidad. ¡Ven a visitarnos y descubre la mejor selección de frutas, semillas y verduras en
         Bogotá!</p>
     </div>
 
-    <footer>footer</footer>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-container-left">
+          <h3>FrutiSec</h3>
+        </div>
+        <div class="footer-container-right">
+          <h3>CONTACTANOS</h3>
+          <p>Telefono: 123456789</p>
+          <p>Correo:
+    </footer>
 
   </div>
 
