@@ -26,7 +26,9 @@ nav .logo {
     font-size: xx-large;
     align-items: center;
     padding: 0 20px;
-    color: rgb(248, 255, 50);
+    color: white;
+    font-weight: lighter;
+    text-decoration: underline #CDA434 1px
 }
 
 nav ul {
@@ -55,7 +57,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: rgb(248, 255, 50);
+    color: #CDA434;
     
 }
 
@@ -67,7 +69,7 @@ nav ul li a::after {
     height: 1px;
     bottom: 1em;
     left: 50%;
-    background-color: rgb(248, 255, 50);
+    background-color: #CDA434;
     transition: all 0.4s ease-in-out;
     /* Agregamos una transición suave para la animación */
 }
@@ -125,7 +127,7 @@ nav ul li a:hover::after {
 /* IMAGEN HEADER */
 
 .bg-header {
-    background-image: url("../img/bg.jfif");
+    background-image: url("../img/FyV.jfif");
     background-size: cover;
     background-position: center center;
     filter: blur(1px);

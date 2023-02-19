@@ -42,4 +42,4 @@ def nuevo():
         return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host="192.168.0.3", port=5000)
+    app.run(debug=True)

@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    <link rel="stylesheet" href="../staticFiles/css/prodcutos-filtros.css">
 </head>
 <body>
-    <h1>HOLA</h1> <!-- Crear estructuras de 1 sola card así después codeo el for con Jinja2 y poder duplicarlo la veces que se requieran (la cantidad de productos que hayan en la base de datos) -->
+    <div class="todo">
+        <section class="section1" name="filtros">
+            <div class="filtros">
+                <ul>
+                    <input type="checkbox" name="Semillas"><label>Semillas</label><br>
+                    <input type="checkbox" name="Especias"><label>Especias</label><br>
+                    <input type="checkbox" name="Frutas"><label>Frutas</label><br>
+                    <input type="checkbox" name="Verduras"><label>Verduras</label><br>
+                </ul>
+            </div>     <!-- Ir acomodando la estética a lo que es el index principal -->
+        </section>  
+        <section class="section2" name="productos">
+            <div class="navbar-container">
+                <input class="navbar" type="text">
+                <button>Buscar</button>
+            </div>
+            <div class="productos">
+                <div class="card">
+                    <h1>Title</h1>
+                    <img href="#">
+                    <p>Description</p>
+                </div>
+                <div class="card">      <!-- Arreglar para que puedan estar horizontal, mañana me encargo de -->>
+                    <h1>Title</h1>      <!-- hacer lo de Jinja2 para que de 1 salgan varias. -->
+                    <img href="#">
+                    <p>Description</p>
+                </div>
+                <div class="card">
+                    <h1>Title</h1>
+                    <img href="#">
+                    <p>Description</p>
+                </div>
+            </div>
+        </section>
+    </div>    
 </body>
 </html>

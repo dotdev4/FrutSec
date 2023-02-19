@@ -9,6 +9,18 @@
     height: 100vh;
 }
 
+.about-container-chil{
+    background-color: rgb(52, 50, 50);
+    flex-direction: column;
+}
+
+.direcciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+
 .about-container h3 {
     font-size: 35px;
     font-weight: 700;
@@ -23,21 +35,24 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.about-container h3:hover {
-    transform: translateY(-5px);
-}
-
-.about-container p {
+.about-container-chil p {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 50px;
     width: 80%;
     padding: 50px 50px;
-    background-color: rgb(55, 57, 59);
     color: white;
     line-height: 25px;
 }
 
-.about-container p span{
+.about-container-chil p span{
     color: rgb(68, 164, 68);
+}
+
+.dir1{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 70px;
 }

@@ -1,0 +1,46 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.todo{
+    height: 1000px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+}
+
+.section1{
+    display: flex;
+    background-color: blue;
+    width: 30%;
+    height: 100vh;
+}
+
+.section2{
+    display: flex;
+    background-color: red;
+    width: 70%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.section2 .productos{
+    background-color: green;
+    width: 90%;
+    height: 90%;
+}
