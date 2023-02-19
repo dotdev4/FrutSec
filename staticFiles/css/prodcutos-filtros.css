@@ -1,46 +1,112 @@
-* {
-    font-family: 'Poppins', sans-serif;
+.body{
+    background-color: rgb(17, 18, 19);
 }
 
-body{
+.navbar {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+  }
+  
+  .navbar-container {
     display: flex;
-    justify-content: center;
-    background-color: black;
-}
-
-.todo{
-    height: 1000px;
-    width: 90vw;
-    display: flex;
-    justify-content: center;
-}
-
-.section1{
-    display: flex;
-    background-color: blue;
-    width: 30%;
-    height: 100vh;
-}
-
-.section2{
-    display: flex;
-    background-color: red;
-    width: 70%;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}
-
-.card{
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    border-radius: 15px;
-}
-
-.section2 .productos{
-    background-color: green;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search input[type="text"] {
+    background-color: #5d5858;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    margin-right: 10px;
+  }
+  .search input[type="text"]:focus {
+    outline: none;
+  }
+  
+  .search button[type="submit"] {
+    background-color: #005ea8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sidebar {
+    flex: 1;
+    padding: 10px;
+    background-color: #5d5858;
+  }
+  
+  .filters h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .filters .filter {
+    margin-bottom: 5px;
+  }
+  
+  .filters .filter label {
+    margin-left: 5px;
+  }
+  
+  .products {
+    flex: 3;
+    
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .card {
     width: 90%;
-    height: 90%;
-}
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ddd;
+    padding: 10px;
+    margin: 10px;
+  }
+  .card img {
+    width: 40%;
+    margin-left: 25%;
+    margin-bottom: 10px;
+  }
+  .card h3 {
+    font-size: 1.2em;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .card .precio {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #0077be;
+    margin-bottom: 10px;
+  }

@@ -127,7 +127,7 @@ nav ul li a:hover::after {
 /* IMAGEN HEADER */
 
 .bg-header {
-    background-image: url("../img/FyV.jfif");
+    background-image: url("../img/bg.jfif");
     background-size: cover;
     background-position: center center;
     filter: blur(1px);

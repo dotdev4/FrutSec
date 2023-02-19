@@ -9,17 +9,6 @@
     height: 100vh;
 }
 
-.about-container-chil{
-    background-color: rgb(52, 50, 50);
-    flex-direction: column;
-}
-
-.direcciones{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25vh;
-}
 
 .about-container h3 {
     font-size: 35px;
@@ -35,12 +24,17 @@
     transition: transform 0.2s ease-in-out;
 }
 
+.about-container-chil{
+    background-color: rgb(52, 50, 50);
+    flex-direction: column;
+}
+
 .about-container-chil p {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 50px;
     width: 80%;
-    padding: 50px 50px;
+    padding: 20px 50px;
     color: white;
     line-height: 25px;
 }
@@ -49,10 +43,17 @@
     color: rgb(68, 164, 68);
 }
 
+.direcciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    gap: 20em;
+}
+
 .dir1{
     width: 200px;
     height: 200px;
     background-color: white;
     border-radius: 15px;
-    margin: 0 70px;
 }

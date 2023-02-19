@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,76 @@
     <title>Productos</title>
     <link rel="stylesheet" href="../staticFiles/css/prodcutos-filtros.css">
 </head>
+
 <body>
-    <div class="todo">
-        <section class="section1" name="filtros">
-            <div class="filtros">
-                <ul>
-                    <input type="checkbox" name="Semillas"><label>Semillas</label><br>
-                    <input type="checkbox" name="Especias"><label>Especias</label><br>
-                    <input type="checkbox" name="Frutas"><label>Frutas</label><br>
-                    <input type="checkbox" name="Verduras"><label>Verduras</label><br>
-                </ul>
-            </div>     <!-- Ir acomodando la estética a lo que es el index principal -->
-        </section>  
-        <section class="section2" name="productos">
-            <div class="navbar-container">
-                <input class="navbar" type="text">
-                <button>Buscar</button>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <div class="logo">FrutSec</div>
+          <div class="search">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+          </div>
+        </div>
+      </nav>
+      
+      <main class="content">
+        <div class="sidebar">
+          <h3>Filtrar por:</h3>
+          <div class="filters">
+            <div class="filter">
+              <input type="checkbox" id="semillas" name="semillas">
+              <label for="semillas">Semillas</label>
             </div>
-            <div class="productos">
-                <div class="card">
-                    <h1>Title</h1>
-                    <img href="#">
-                    <p>Description</p>
-                </div>
-                <div class="card">      <!-- Arreglar para que puedan estar horizontal, mañana me encargo de -->>
-                    <h1>Title</h1>      <!-- hacer lo de Jinja2 para que de 1 salgan varias. -->
-                    <img href="#">
-                    <p>Description</p>
-                </div>
-                <div class="card">
-                    <h1>Title</h1>
-                    <img href="#">
-                    <p>Description</p>
-                </div>
+            <div class="filter">
+              <input type="checkbox" id="especias" name="especias">
+              <label for="especias">Especias</label>
             </div>
-        </section>
-    </div>    
+            <div class="filter">
+              <input type="checkbox" id="frutas" name="frutas">
+              <label for="frutas">Frutas</label>
+            </div>
+            <div class="filter">
+              <input type="checkbox" id="verduras" name="verduras">
+              <label for="verduras">Verduras</label>
+            </div>
+          </div>
+        </div>
+        <div class="products">
+          <div class="product-grid">
+            <div class="card">
+                <img src="../staticFiles/img/appleygreen.png" alt="Product">
+                <h3>Manzana verde</h3>
+                <p class="precio">99.99 CP</p>
+            </div>
+            <div class="card">
+                <img src="../staticFiles/img/appleygreen.png" alt="Product">
+                <h3>Manzana verde</h3>
+                <p class="precio">99.99 CP</p>
+            </div>
+            <div class="card">
+                <img src="../staticFiles/img/appleygreen.png" alt="Product">
+                <h3>Manzana verde</h3>
+                <p class="precio">99.99 CP</p>
+            </div>
+            <div class="card">
+                <img src="../staticFiles/img/appleygreen.png" alt="Product">
+                <h3>Manzana verde</h3>
+                <p class="precio">99.99 CP</p>
+            </div>
+            <div class="card">
+                <img src="../staticFiles/img/appleygreen.png" alt="Product">
+                <h3>Manzana verde</h3>
+                <p class="precio">99.99 CP</p>
+            </div>
+            <div class="card">
+                <img src="../staticFiles/img/appleygreen.png" alt="Product">
+                <h3>Manzana verde</h3>
+                <p class="precio">99.99 CP</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
 </body>
+
 </html>
