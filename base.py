@@ -22,6 +22,7 @@ class Productos(base):
     name = Column(String)
     description = Column(String(50))
     #data = Column(LargeBinary)
+    categoria = Column(String(10))
     price = Column(Integer)
 
     def __repr__(self):
@@ -32,14 +33,15 @@ class Productos(base):
             'name' : self.name,
             'description' : self.description,
             #'data' : self.data,
+            'categoria' : self.categoria,
             'price' : self.price
         })
 
-def insert(name, description, price):
+def insert(name, description, categoria, price):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    a = Productos(name=name, description=description, price=price)
+    a = Productos(name=name, description=description, categoria=categoria, price=price)
     
     session.add(a)
     session.commit()

@@ -36,8 +36,9 @@ def nuevo():
     if request.method == 'POST':
         n = str(request.form.get('name'))#name
         d = str(request.form.get('description'))#description
+        c = str(request.form.get('categoria'))#categoria
         p = request.form.get('price')#price
-        insert(n, d, p)
+        insert(n, d, c, p)
 
         return render_template('index.html')
 
