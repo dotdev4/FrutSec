@@ -1,7 +1,8 @@
 from io import BytesIO
 from flask import Flask, render_template, redirect, json, jsonify, request
 import traceback
-from base import Productos, session, insert
+from base import Productos, session, insert, filter
+import base
 
 app = Flask(__name__, static_folder='staticFiles', template_folder='templates')
 
@@ -19,6 +20,23 @@ def productos():
             return render_template('productos.html')
         except:
             return jsonify({'trace': traceback.format_exc()})
+
+@app.route("/productos/todos", methods=['GET'])
+def filt():
+    try:
+        productos_productos = {base.filter()}
+
+        nueva = []
+
+        for producto in productos_productos:
+            nueva.append(producto)
+
+        return jsonify(nueva)
+
+    except:
+        return jsonify({'trace': traceback.format_exc()})
+
+
 
 @app.route("/abm", methods=['GET'])
 def abm():
@@ -38,9 +56,9 @@ def nuevo():
         d = str(request.form.get('description'))#description
         c = str(request.form.get('categoria'))#categoria
         p = request.form.get('price')#price
-        insert(n, d, c, p)
+        insert(n, d, c.capitalize(), p)
 
-        return render_template('index.html')
+        return render_template('index.html')    
 
 if __name__ == '__main__':
     app.run(debug=True)

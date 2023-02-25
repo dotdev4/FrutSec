@@ -52,33 +52,39 @@
     <!-- PRODUCTOS -->
     <div class="cards-container">
       <h3 class="cards-container-title">PRODUCTOS</h3>
-      <div class="div">
-        <div class="card" id="cards">
-          <img src="../staticFiles/img/cards-index/tienda.png" alt="Imagen 1">
-          <h3>Todos</h3>
+      <a href={{ url_for("productos") }}>
+        <div class="div">
+          <div class="card" id="cards">
+            <img src="../staticFiles/img/cards-index/tienda.png" alt="Imagen 1">
+            <h3>Todos</h3>
+          </div>
         </div>
-      </div>
-
+      </a>
       <div class="row">
-        <div class="card" id="cards">
-          <img src="../staticFiles/img/cards-index/brote.png" alt="Imagen 1">
-          <h3>Semillas</h3>
-        </div>
-
-        <div class="card" id="cards">
-          <img src="../staticFiles/img/cards-index/condimento.png" alt="Imagen 2">
-          <h3>Especias</h3>
-        </div>
-
-        <div class="card" id="cards">
-          <img src="../staticFiles/img/cards-index/fruta.png" alt="Imagen 3">
-          <h3>Frutas</h3>
-        </div>
-
-        <div class="card" id="cards">
-          <img src="../staticFiles/img/cards-index/verduras.png" alt="Imagen 4">
-          <h3>Verduras</h3>
-        </div>
+        <a href={{ url_for("filt") }}>
+          <div class="card" id="cards">
+            <img src="../staticFiles/img/cards-index/brote.png" alt="Imagen 1">
+            <h3>Semillas</h3>
+          </div>
+        </a>
+        <a>
+          <div class="card" id="cards">
+            <img src="../staticFiles/img/cards-index/condimento.png" alt="Imagen 2">
+            <h3>Especias</h3>
+          </div>
+        </a>
+        <a>
+          <div class="card" id="cards">
+            <img src="../staticFiles/img/cards-index/fruta.png" alt="Imagen 3">
+            <h3>Frutas</h3>
+          </div>
+        </a>
+        <a>
+          <div class="card" id="cards">
+            <img src="../staticFiles/img/cards-index/verduras.png" alt="Imagen 4">
+            <h3>Verduras</h3>
+          </div>
+        </a>
       </div>
     </div>
     <!-- ABOUT -->

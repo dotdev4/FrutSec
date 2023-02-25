@@ -1,6 +1,6 @@
 import sqlalchemy
 
-from sqlalchemy import Column, Integer, String, LargeBinary
+from sqlalchemy import Column, Integer, String, LargeBinary, func
 from sqlalchemy.sql import func
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
@@ -45,6 +45,21 @@ def insert(name, description, categoria, price):
     
     session.add(a)
     session.commit()
+
+def filter(): # FALTA ARREGLAR, NO DAR BOLA
+    json_fin = []
+
+    query = session.query(Productos).all()
+
+    for producto in query:
+        json = []
+        json['name'] = str(producto.name)
+        json['description'] = str(producto.description)
+        json['categoria'] = str(producto.categoria) 
+        json['price'] = producto.price
+        json_fin.append(json)
+
+    return json_fin
 
 if __name__ == "__main__":
     base.metadata.create_all(engine)

@@ -1,5 +1,9 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 body{
-  background-color: #000000;
+  background-color: #0c0c0c;
 }
 
 .navbar {
@@ -20,6 +24,7 @@ body{
   .logo {
     font-size: 1.2em;
     color: rgb(255, 255, 255);
+    text-decoration: underline #CDA434 1px
   }
   
   .search {
