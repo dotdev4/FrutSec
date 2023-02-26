@@ -8,10 +8,7 @@ app = Flask(__name__, static_folder='staticFiles', template_folder='templates')
 
 @app.route("/")
 def index():
-    try:
-        return render_template('index.html')
-    except:
-        return jsonify({'trace': traceback.format_exc()})
+    return render_template('index.html')
 
 @app.route("/productos", methods=['GET'])
 def productos():
@@ -21,33 +18,19 @@ def productos():
         except:
             return jsonify({'trace': traceback.format_exc()})
 
-@app.route("/productos/todos", methods=['GET'])
-def filt():
+@app.route("/productos/<cat>", methods=['GET'])
+def productos_x_cat(cat):
     try:
-        productos_productos = {base.filter()}
-
-        nueva = []
-
-        for producto in productos_productos:
-            nueva.append(producto)
-
-        return jsonify(nueva)
-
+        cat = cat.lower()
+        f = filter(cat)
+        return jsonify(f)
     except:
-        return jsonify({'trace': traceback.format_exc()})
-
-
+        return render_template('index.html')
 
 @app.route("/abm", methods=['GET'])
 def abm():
     if request.method == 'GET':
         return render_template('abm.html')
-    #elif request.method == 'POST':
-    #    file = request.files['file']
-    #    upload = Upload(name=file.filename, data=file.read())
-    #    session.add(upload)
-    #    session.commit()
-    #    return f'Uploaded: {file.filename}
 
 @app.route("/nuevo", methods=['POST'])
 def nuevo():
@@ -56,7 +39,7 @@ def nuevo():
         d = str(request.form.get('description'))#description
         c = str(request.form.get('categoria'))#categoria
         p = request.form.get('price')#price
-        insert(n, d, c.capitalize(), p)
+        insert(n, d, c.lower(), p)
 
         return render_template('index.html')    
 

@@ -5,8 +5,6 @@ from sqlalchemy.sql import func
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 
-from flask import jsonify
-
 engine = sqlalchemy.create_engine('sqlite:///database.db')
 
 base = declarative_base()
@@ -21,18 +19,16 @@ class Productos(base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     description = Column(String(50))
-    #data = Column(LargeBinary)
     categoria = Column(String(10))
     price = Column(Integer)
 
     def __repr__(self):
         return self
-    def __repr__(self):
+    def getJSON(self):
         return ({
             'id' : self.id,
             'name' : self.name,
             'description' : self.description,
-            #'data' : self.data,
             'categoria' : self.categoria,
             'price' : self.price
         })
@@ -46,20 +42,17 @@ def insert(name, description, categoria, price):
     session.add(a)
     session.commit()
 
-def filter(): # FALTA ARREGLAR, NO DAR BOLA
-    json_fin = []
+def filter(cat): # query que filtra por parámetro de categoria pasado
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-    query = session.query(Productos).all()
+    query = session.query(Productos).filter(Productos.categoria == cat)
+    
+    resp = []
 
-    for producto in query:
-        json = []
-        json['name'] = str(producto.name)
-        json['description'] = str(producto.description)
-        json['categoria'] = str(producto.categoria) 
-        json['price'] = producto.price
-        json_fin.append(json)
-
-    return json_fin
+    for c in query.all():
+        resp.append(c.getJSON())
+    return resp
 
 if __name__ == "__main__":
     base.metadata.create_all(engine)
