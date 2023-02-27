@@ -48,11 +48,7 @@ def filter(cat): # query que filtra por parámetro de categoria pasado
 
     query = session.query(Productos).filter(Productos.categoria == cat)
     
-    resp = []
-
-    for c in query.all():
-        resp.append(c.getJSON())
-    return resp
+    return query
 
 def filt_all():
     Session = sessionmaker(bind=engine)

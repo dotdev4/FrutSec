@@ -33,7 +33,6 @@
   <main class="content">
     <div class="sidebar">
       <h3>Filtrar por:</h3>
-      {% for filter in filters %}
       <div class="filters">
         <div class="filter">
           <input type="checkbox" id="semillas" name="semillas">
@@ -51,41 +50,17 @@
           <input type="checkbox" id="verduras" name="verduras">
           <label for="verduras">Verduras</label>
         </div>
-        {% endfor %}
       </div>
     </div>
     <div class="products">
       <div class="product-grid">
+        {% for row in data %}
         <div class="card">
           <img src="../staticFiles/img/appleygreen.png" alt="Product">
-          <h3>Manzana verde</h3>
-          <p class="precio">99.99 CP</p>
+          <h3>{{ row.name }}</h3>
+          <p class="precio">{{ row.price }}</p>
         </div>
-        <div class="card">
-          <img src="../staticFiles/img/appleygreen.png" alt="Product">
-          <h3>Manzana verde</h3>
-          <p class="precio">99.99 CP</p>
-        </div>
-        <div class="card">
-          <img src="../staticFiles/img/appleygreen.png" alt="Product">
-          <h3>Manzana verde</h3>
-          <p class="precio">99.99 CP</p>
-        </div>
-        <div class="card">
-          <img src="../staticFiles/img/appleygreen.png" alt="Product">
-          <h3>Manzana verde</h3>
-          <p class="precio">99.99 CP</p>
-        </div>
-        <div class="card">
-          <img src="../staticFiles/img/appleygreen.png" alt="Product">
-          <h3>Manzana verde</h3>
-          <p class="precio">99.99 CP</p>
-        </div>
-        <div class="card">
-          <img src="../staticFiles/img/appleygreen.png" alt="Product">
-          <h3>Manzana verde</h3>
-          <p class="precio">99.99 CP</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </main>

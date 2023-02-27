@@ -1,7 +1,7 @@
 from io import BytesIO
 from flask import Flask, render_template, redirect, json, jsonify, request
 import traceback
-from base import Productos, session, insert, filter, filt_all
+from base import Productos, session, insert, filter, filt_all, Session
 import base
 
 app = Flask(__name__, static_folder='staticFiles', template_folder='templates')
@@ -30,8 +30,9 @@ def productos():
 @app.route("/productos/todos", methods=['GET'])
 def productos_todos():
     try:
-        f = filt_all()
-        return jsonify(f)
+        session = Session()
+        data = session.query(Productos).all()
+        return render_template('productos.html', data=data)
     except:
         return render_template('index.html')
 
@@ -39,7 +40,7 @@ def productos_todos():
 def productos_semillas():
     try:
         f = filter(cat='semillas')
-        return jsonify(f)
+        return render_template('productos.html', data=f)
     except:
         return render_template('index.html')
     
@@ -47,7 +48,7 @@ def productos_semillas():
 def productos_especias():
     try:
         f = filter(cat='especias')
-        return jsonify(f)
+        return render_template('productos.html', data=f)
     except:
         return render_template('index.html')
     
@@ -55,7 +56,7 @@ def productos_especias():
 def productos_frutas():
     try:
         f = filter(cat='frutas')
-        return jsonify(f)
+        return render_template('productos.html', data=f)
     except:
         return render_template('index.html')    
 
@@ -63,7 +64,7 @@ def productos_frutas():
 def productos_verduras():
     try:
         f = filter(cat='verduras')
-        return jsonify(f)
+        return render_template('productos.html', data=f)
     except:
         return render_template('index.html')    
 
