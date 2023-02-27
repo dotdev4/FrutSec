@@ -2,85 +2,94 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link rel="stylesheet" href="../staticFiles/css/normalize.css">
-    <link rel="stylesheet" href="../staticFiles/css/prodcutos-filtros.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrutSec</title>
+  <link rel="stylesheet" href="../staticFiles/css/normalize.css">
+  <link rel="stylesheet" href="../staticFiles/css/prodcutos-filtros.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <div class="logo">FrutSec</div>
+  <nav class="navbar">
+    <ul>
+      <li><a class="logo" href="">FrutSec</a></li>
+    </ul>
+    <ul>
+      <li>
         <div class="search">
           <input type="text" placeholder="Buscar...">
           <button type="submit">Buscar</button>
         </div>
+      </li>
+    </ul>
+
+  </nav>
+  <main class="content">
+    <div class="sidebar">
+      <h3>Filtrar por:</h3>
+      {% for filter in filters %}
+      <div class="filters">
+        <div class="filter">
+          <input type="checkbox" id="semillas" name="semillas">
+          <label for="semillas">Semillas</label>
+        </div>
+        <div class="filter">
+          <input type="checkbox" id="especias" name="especias">
+          <label for="especias">Especias</label>
+        </div>
+        <div class="filter">
+          <input type="checkbox" id="frutas" name="frutas">
+          <label for="frutas">Frutas</label>
+        </div>
+        <div class="filter">
+          <input type="checkbox" id="verduras" name="verduras">
+          <label for="verduras">Verduras</label>
+        </div>
+        {% endfor %}
       </div>
-    </nav>
-      
-      <main class="content">
-        <div class="sidebar">
-          <h3>Filtrar por:</h3>
-          {% for filter in filters %}
-          <div class="filters">
-            <div class="filter">
-              <input type="checkbox" id="semillas" name="semillas">
-              <label for="semillas">Semillas</label>
-            </div>
-            <div class="filter">
-              <input type="checkbox" id="especias" name="especias">
-              <label for="especias">Especias</label>
-            </div>
-            <div class="filter">
-              <input type="checkbox" id="frutas" name="frutas">
-              <label for="frutas">Frutas</label>
-            </div>
-            <div class="filter">
-              <input type="checkbox" id="verduras" name="verduras">
-              <label for="verduras">Verduras</label>
-            </div>
-          {% endfor %}
-          </div>
+    </div>
+    <div class="products">
+      <div class="product-grid">
+        <div class="card">
+          <img src="../staticFiles/img/appleygreen.png" alt="Product">
+          <h3>Manzana verde</h3>
+          <p class="precio">99.99 CP</p>
         </div>
-        <div class="products">
-          <div class="product-grid">
-            <div class="card">
-                <img src="../staticFiles/img/appleygreen.png" alt="Product">
-                <h3>Manzana verde</h3>
-                <p class="precio">99.99 CP</p>
-            </div>
-            <div class="card">
-                <img src="../staticFiles/img/appleygreen.png" alt="Product">
-                <h3>Manzana verde</h3>
-                <p class="precio">99.99 CP</p>
-            </div>
-            <div class="card">
-                <img src="../staticFiles/img/appleygreen.png" alt="Product">
-                <h3>Manzana verde</h3>
-                <p class="precio">99.99 CP</p>
-            </div>
-            <div class="card">
-                <img src="../staticFiles/img/appleygreen.png" alt="Product">
-                <h3>Manzana verde</h3>
-                <p class="precio">99.99 CP</p>
-            </div>
-            <div class="card">
-                <img src="../staticFiles/img/appleygreen.png" alt="Product">
-                <h3>Manzana verde</h3>
-                <p class="precio">99.99 CP</p>
-            </div>
-            <div class="card">
-                <img src="../staticFiles/img/appleygreen.png" alt="Product">
-                <h3>Manzana verde</h3>
-                <p class="precio">99.99 CP</p>
-            </div>
-          </div>
+        <div class="card">
+          <img src="../staticFiles/img/appleygreen.png" alt="Product">
+          <h3>Manzana verde</h3>
+          <p class="precio">99.99 CP</p>
         </div>
-      </main>
-      
+        <div class="card">
+          <img src="../staticFiles/img/appleygreen.png" alt="Product">
+          <h3>Manzana verde</h3>
+          <p class="precio">99.99 CP</p>
+        </div>
+        <div class="card">
+          <img src="../staticFiles/img/appleygreen.png" alt="Product">
+          <h3>Manzana verde</h3>
+          <p class="precio">99.99 CP</p>
+        </div>
+        <div class="card">
+          <img src="../staticFiles/img/appleygreen.png" alt="Product">
+          <h3>Manzana verde</h3>
+          <p class="precio">99.99 CP</p>
+        </div>
+        <div class="card">
+          <img src="../staticFiles/img/appleygreen.png" alt="Product">
+          <h3>Manzana verde</h3>
+          <p class="precio">99.99 CP</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
 </body>
 
 </html>
