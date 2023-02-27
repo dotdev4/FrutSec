@@ -54,5 +54,17 @@ def filter(cat): # query que filtra por parámetro de categoria pasado
         resp.append(c.getJSON())
     return resp
 
+def filt_all():
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    query = session.query(Productos).all()
+    
+    resp = []
+
+    for c in query:
+        resp.append(c.getJSON())
+    return resp
+
 if __name__ == "__main__":
     base.metadata.create_all(engine)
