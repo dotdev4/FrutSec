@@ -19,16 +19,29 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
   <div class="container">
     <!-- NAVBAR -->
     <nav>
-      <ul>
+      <div class="menu-icon menu-toggle">
+        <span class="material-symbols-outlined">
+          menu
+        </span>
+      </div>
+      <div id="menu"">
+        <ul>
+          <li><a href="{{url_for('productos')}}">Productos</a></li>
+          <li><a href="#sobrenosotros">Nosotros</a></li>
+          <li><a href="#contactanos">Contactanos</a></li>
+        </ul>
+      </div>
+      <ul class="ul-logo">
         <li><span class="logo">FrutSec</span></li>
       </ul>
-      <ul>
+      <ul class="ul-links">
         <li><a href="{{url_for('productos')}}">Productos</a></li>
 
         <li><a href="#sobrenosotros">Nosotros</a></li>
