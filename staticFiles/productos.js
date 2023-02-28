@@ -1,24 +1,28 @@
-import axios from 'axios';
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Enviar solicitud AJAX al servidor Flask para obtener los productos de la categoría "semillas"
-  axios.get('/productos/semillas')
-    .then(response => {
-      // Crear una card para cada producto y agregarla al elemento HTML correspondiente
-      const productos_semillas = document.querySelector('#productos-semillas');
-      response.data.forEach(producto => {
-        const card = `
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">${producto.nombre}</h5>
-              <p class="card-text">Categoría: ${producto.categoria}</p>
-            </div>
-          </div>
-        `;
-        productos_semillas.insertAdjacentHTML('beforeend', card);
-      });
+var radios = document.getElementsByName('filtrocategoria')
+for ( var i = 0; i < radios.length; i++){
+  radios[i].addEventListener('click', e => {render_cat(e)})
+}
+
+function render_cat (e)
+{
+  fetch("/api/1/" + e.target.value)
+    .then( response => response.json() )
+    .then( d =>{
+      h = ""
+      for(var i = 0; i < d.length; i++){
+        var p = `
+        <div class="card">
+          <img src="../staticFiles/img/appleygreen.png" alt="Product">
+          <h3>`+ d[i].name +`</h3>
+          <p class="precio">`+d[i].price+`</p>
+        </div>
+        `
+        h = h + p
+      }
+      return h
     })
-    .catch(error => {
-      console.error(error);
-    });
-});
+    .then( f => {
+      grid = document.getElementById('product-grid').innerHTML = f
+    })
+}

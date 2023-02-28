@@ -35,36 +35,33 @@
       <h3>Filtrar por:</h3>
       <div class="filters">
         <div class="filter">
-          <input type="checkbox" id="semillas" name="semillas">
+          <input type="radio" id="filtrocategoria" name="filtrocategoria" value="todos">
+          <label for="todos">Todos</label>
+        </div>
+        <div class="filter">
+          <input type="radio" id="filtrocategoria" name="filtrocategoria" value="semillas">
           <label for="semillas">Semillas</label>
         </div>
         <div class="filter">
-          <input type="checkbox" id="especias" name="especias">
+          <input type="radio" id="filtrocategoria" name="filtrocategoria" value="especias">
           <label for="especias">Especias</label>
         </div>
         <div class="filter">
-          <input type="checkbox" id="frutas" name="frutas">
+          <input type="radio" id="filtrocategoria" name="filtrocategoria" value="frutas">
           <label for="frutas">Frutas</label>
         </div>
         <div class="filter">
-          <input type="checkbox" id="verduras" name="verduras">
+          <input type="radio" id="filtrocategoria" name="filtrocategoria" value="verduras">
           <label for="verduras">Verduras</label>
         </div>
       </div>
     </div>
     <div class="products">
-      <div class="product-grid">
-        {% for row in data %}
-        <div class="card">
-          <img src="../staticFiles/img/appleygreen.png" alt="Product">
-          <h3>{{ row.name }}</h3>
-          <p class="precio">{{ row.price }}</p>
-        </div>
-        {% endfor %}
+      <div class="product-grid" id="product-grid">
       </div>
     </div>
+    <script src="/staticFiles/productos.js"></script>
   </main>
-
 </body>
 
 </html>

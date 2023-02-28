@@ -1,7 +1,7 @@
 from io import BytesIO
 from flask import Flask, render_template, redirect, json, jsonify, request
 import traceback
-from base import Productos, session, insert, filter, Session
+from base import Productos, session, insert, filter, Session, j_filter
 import base
 
 app = Flask(__name__, static_folder='staticFiles', template_folder='templates')
@@ -17,7 +17,7 @@ def productos():
             return render_template('productos.html')
         except:
             return jsonify({'trace': traceback.format_exc()})
-
+"""
 @app.route("/productos/<cat>", methods=['GET'])
 def productos_x_cat(cat):
     try:
@@ -29,6 +29,7 @@ def productos_x_cat(cat):
             pass
     except:
         return render_template('index.html')
+"""
 
 @app.route("/productos/todos", methods=['GET'])
 def productos_todos():
@@ -38,6 +39,19 @@ def productos_todos():
         return render_template('productos.html', data=data)
     except:
         return render_template('index.html')
+    
+@app.route("/api/1/<cat>", methods=['GET'])
+def api_1_query(cat):
+    try:
+        if cat is not None:
+            cat = cat.lower()
+            f = j_filter(cat=cat)
+            return jsonify(f)
+        else:
+            pass
+    except Exception as e:
+        return jsonify({'data': '',
+                        'error': e})
         
 @app.route("/abm", methods=['GET'])
 def abm():

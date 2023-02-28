@@ -50,5 +50,21 @@ def filter(cat): # query que filtra por parámetro de categoria pasado
     
     return query
 
+def j_filter(cat): 
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    if cat == "todos":
+        query = session.query(Productos)
+    else:
+        query = session.query(Productos).filter(Productos.categoria == cat)
+    
+    resp_prod = []
+
+    for producto in query:
+        resp_prod.append(producto.getJSON())
+
+    return resp_prod
+
+
 if __name__ == "__main__":
     base.metadata.create_all(engine)
