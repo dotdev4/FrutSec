@@ -158,48 +158,81 @@ nav ul li a:hover::after {
     }
 }
 
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+@keyframes rotation-back {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
 
 /* responsive */
 
-@media only screen and (max-width: 767px) {
-    body{
+@media only screen and (max-width: 375px) {
+    body {
         overflow-x: hidden;
     }
-    nav {
-        height: 4em;
-        width: 100vw;
-        align-items: center;
-        justify-content: space-between
-    }
 
-    nav .menu-icon {
-        padding-left: 1em;
-    }
-
-    nav .logo {
-        font-size: 1.5em;
-
-    }
-
-    nav .ul-logo {
-        display: flex;
-    }
-
-    nav .ul-links {
+    #navbar-default {
         display: none;
     }
 
+    #navbar-mobile {
+        display: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-icon-mobile {
+        padding: 15px 15px 0 10px;
+    }
+
+    .menu-icon-mobile.rotate{
+        animation: rotation 0.5s ease forwards;
+    }
+    .menu-icon-mobile.rotate-back{
+        animation: rotation-back 0.5s ease forwards;
+    }
+    
+
+
     /* Estilos del menú */
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    #menu-desplegable.visible {
+        display: block; 
+        
+    }
+
     #menu {
         position: fixed;
-        top: 4em;
+        top: 3.3em;
         left: 0;
-        width: 8em;
-        height: 350%;
+        width: 100%;
+        height: 15%;
+        z-index: 4;
         background-color: #000000;
         color: #fff;
         padding: 1em;
-        transition: all 0.3s ease-in-out;
+        animation: slide-in-nav 0.5s ease forwards;
+        transition: all 0.5s ease-in-out;
     }
 
     #menu ul {
@@ -221,43 +254,46 @@ nav ul li a:hover::after {
 
     #menu ul li a:hover {
         color: #CDA434;
-    
+
     }
-    
-    #menu ul li a::before,
-    #menu ul li a::after {
-        content: "";
+
+    /* header */
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
         position: absolute;
-        width: 0%;
-        height: 1px;
-        bottom: 1em;
+        top: 50%;
         left: 50%;
-        background-color: #CDA434;
-        transition: all 0.4s ease-in-out;
-        /* Agregamos una transición suave para la animación */
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
     }
-    
-    #menu ul li a::before {
-        transform: translateX(-30%);
-        /* Colocamos el elemento ::before en la mitad izquierda del texto */
-    }
-    
-    #menu ul li a::after {
-        transform: translateX(-70%);
-        /* Colocamos el elemento ::after en la mitad derecha del texto */
-    }
-    
-    #menu ul li a:hover::before,
-    #menu ul li a:hover::after {
-        width: 50%;
-        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
-    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    body{
+    body {
         overflow-x: hidden;
     }
+
     nav {
         height: 4em;
         width: 100vw;
@@ -314,9 +350,9 @@ nav ul li a:hover::after {
 
     #menu ul li a:hover {
         color: #CDA434;
-    
+
     }
-    
+
     #menu ul li a::before,
     #menu ul li a::after {
         content: "";
@@ -329,17 +365,17 @@ nav ul li a:hover::after {
         transition: all 0.4s ease-in-out;
         /* Agregamos una transición suave para la animación */
     }
-    
+
     #menu ul li a::before {
         transform: translateX(-30%);
         /* Colocamos el elemento ::before en la mitad izquierda del texto */
     }
-    
+
     #menu ul li a::after {
         transform: translateX(-70%);
         /* Colocamos el elemento ::after en la mitad derecha del texto */
     }
-    
+
     #menu ul li a:hover::before,
     #menu ul li a:hover::after {
         width: 50%;

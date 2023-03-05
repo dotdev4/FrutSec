@@ -1,5 +1,5 @@
 
-var radios = document.getElementsByName('filtrocategoria')
+const radios = document.getElementsByName('filtrocategoria')
 for ( var i = 0; i < radios.length; i++){
   radios[i].addEventListener('click', e => {render_cat(e)})
 }

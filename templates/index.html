@@ -24,20 +24,33 @@
 
 <body>
   <div class="container">
-    <!-- NAVBAR -->
-    <nav>
-      <div class="menu-icon menu-toggle">
+
+
+    <!-- NAVBAR MOBILE -->
+    <nav id="navbar-mobile">
+      <div class="menu-icon-mobile menu-toggle">
         <span class="material-symbols-outlined">
           menu
         </span>
       </div>
-      <div id="menu"">
+      <ul class="ul-logo">
+        <li><span class="logo">FrutSec</span></li>
+      </ul>
+    </nav>
+
+    <!-- MENU DESPLEGABLE -->
+    <div id="menu-desplegable">
+      <div id="menu">
         <ul>
           <li><a href="{{url_for('productos')}}">Productos</a></li>
           <li><a href="#sobrenosotros">Nosotros</a></li>
           <li><a href="#contactanos">Contactanos</a></li>
         </ul>
       </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar-default">
       <ul class="ul-logo">
         <li><span class="logo">FrutSec</span></li>
       </ul>
@@ -50,6 +63,19 @@
 
       </ul>
     </nav>
+
+
+    <!-- HEADER MOBILE -->
+
+    <div class="header-container-mobile">
+      <div class="text-span-container-mobile">
+        <span class="text-header-mobile">Una gran variedad</span>
+        <span class="text-header-mobile">de las frutas y vegetales mas frescas</span>
+      </div>
+      <!-- IMAGEN DEL TEXTO -->
+      <div class="bg-header"></div>
+    </div>
+
     <!-- HEADER -->
 
     <div class="header-container">
@@ -61,6 +87,45 @@
       <!-- IMAGEN DEL TEXTO -->
       <div class="bg-header"></div>
     </div>
+
+
+    <!-- PRODUCTOS MOBILE -->
+
+    <!-- PRODUCTOS -->
+    <div class="cards-container-mobile">
+      <h3 class="cards-container-title-mobile">PRODUCTOS</h3>
+      <a href="{{url_for('productos_todos')}}" class="card-mobile" id="cards-mobile">
+        <img src="../staticFiles/img/cards-index/tienda.png" alt="Imagen 1">
+        <h3 id="title">Todos</h3>
+      </a>
+      <div class="row">
+        <a href="/productos/semillas" class="card" id="card-mobile">
+
+          <img src="../staticFiles/img/cards-index/brote.png" alt="Imagen 1">
+          <h3>Semillas</h3>
+
+        </a>
+        <a href="/productos/especias" class="card" id="card-mobile">
+
+          <img src="../staticFiles/img/cards-index/condimento.png" alt="Imagen 2">
+          <h3>Especias</h3>
+
+        </a>
+        <a href="/productos/frutas" class="card" id="card-mobile">
+
+          <img src="../staticFiles/img/cards-index/fruta.png" alt="Imagen 3">
+          <h3>Frutas</h3>
+
+        </a>
+        <a href="/productos/verduras" class="card" id="card-mobile">
+
+          <img src="../staticFiles/img/cards-index/verduras.png" alt="Imagen 4">
+          <h3>Verduras</h3>
+
+        </a>
+      </div>
+    </div>
+
 
     <!-- PRODUCTOS -->
     <div class="cards-container">
@@ -96,6 +161,29 @@
         </a>
       </div>
     </div>
+
+
+    <!-- ABOUT MOBILE -->
+  
+    <div class="about-container-mobile">
+      <h3>SOBRE NOSOTROS</h3>
+      <div class="about-container-chil-mobile">
+        <p>Hola veci! somos <span>FrutiSec</span> y lo esperamos en nuestros locales de Bogotá y Medillín con ganas de
+          atenderlo!<br><br>
+          Tenemos todo tipos de variedades de frutas, verduras, furtos secos, semillas y especias. A la orden!</p>
+      </div>
+      <div class="direcciones-mobile">
+        <div class="dir1-mobile">
+          <h1>maps local Bogotá</h1>
+        </div>
+        <div class="dir1-mobile">
+          <h1>maps local Medellín</h1>
+        </div>
+      </div>
+    </div>
+
+
+
     <!-- ABOUT -->
     <div class="about-container">
       <h3>SOBRE NOSOTROS</h3>
@@ -113,6 +201,38 @@
         </div>
       </div>
     </div>
+
+
+
+    <!-- FOOTER MOBILE -->
+    <footer>
+      <div class="footer-container-mobile">
+        <div class="footer-container-left-mobile">
+          <h3>FrutSec</h3>
+        </div>
+        <div class="footer-container-center-mobile">
+          <h3>CONTACTANOS</h3>
+          <span class="info-footer-mobile"><img class="maps-icon-mobile" src="https://img.icons8.com/fluency/48/null/phone.png" />
+            <p>301 1232323</p>
+          </span>
+          <span class="info-footer-mobile"><img class="maps-icon-mobile"
+              src="https://img.icons8.com/fluency/48/null/instagram-new.png" />
+            <p>@FrutiSec</p>
+          </span>
+
+          <span class="info-footer-mobile"><img class="maps-icon-mobile"
+              src="https://img.icons8.com/color/144/null/google-maps-new.png" />
+            <p>Bogota 112</p>
+          </span>
+
+        </div>
+        <div class="footer-container-right-mobile">
+          <h3>HORARIOS</h3>
+          <p>LUN - VIE de 7hs a 19hs</p>
+          <p>SAB de 9hs a 17hs</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- FOOTER -->
     <footer>
@@ -146,9 +266,9 @@
 
   </div>
 
-
   <!-- importar script -->
   <script src="../staticFiles/index.js"></script>
+  <script src="../staticFiles/showMenu.js"></script>
 </body>
 
 </html>
