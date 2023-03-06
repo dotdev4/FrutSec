@@ -162,20 +162,134 @@ nav ul li a:hover::after {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(90deg);
     }
 }
+
 @keyframes rotation-back {
     from {
         transform: rotate(90deg);
     }
+
     to {
         transform: rotate(0deg);
     }
 }
 
 /* responsive */
+
+/* wwwwwwwwwwwwwwwwww */
+@media only screen and (min-width: 250px) and (max-width: 329px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #navbar-default {
+        display: none;
+    }
+
+    #navbar-mobile {
+        display: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-icon-mobile {
+        padding: 10px 0 0 15px;
+    }
+
+    .menu-icon-mobile.rotate {
+        animation: rotation 0.5s ease forwards;
+    }
+
+    .menu-icon-mobile.rotate-back {
+        animation: rotation-back 0.5s ease forwards;
+    }
+
+    /* Estilos del menú */
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    #menu-desplegable.visible {
+        display: block;
+
+    }
+
+    #menu {
+        position: fixed;
+        top: 3.3em;
+        left: 0;
+        width: 100%;
+        height: 15%;
+        z-index: 4;
+        background-color: #000000;
+        color: #fff;
+        padding: 1em;
+        animation: slide-in-nav 0.5s ease forwards;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu li {
+        margin-bottom: 20px;
+    }
+
+    #menu a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #menu ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    /* header */
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
 
 @media only screen and (min-width: 330px) and (max-width: 399px) {
     body {
@@ -201,10 +315,11 @@ nav ul li a:hover::after {
         padding: 15px 0 0 20px;
     }
 
-    .menu-icon-mobile.rotate{
+    .menu-icon-mobile.rotate {
         animation: rotation 0.5s ease forwards;
     }
-    .menu-icon-mobile.rotate-back{
+
+    .menu-icon-mobile.rotate-back {
         animation: rotation-back 0.5s ease forwards;
     }
 
@@ -215,8 +330,8 @@ nav ul li a:hover::after {
     }
 
     #menu-desplegable.visible {
-        display: block; 
-        
+        display: block;
+
     }
 
     #menu {
@@ -311,10 +426,11 @@ nav ul li a:hover::after {
         padding: 25px 0 0 20px;
     }
 
-    .menu-icon-mobile.rotate{
+    .menu-icon-mobile.rotate {
         animation: rotation 0.5s ease forwards;
     }
-    .menu-icon-mobile.rotate-back{
+
+    .menu-icon-mobile.rotate-back {
         animation: rotation-back 0.5s ease forwards;
     }
 
@@ -325,8 +441,8 @@ nav ul li a:hover::after {
     }
 
     #menu-desplegable.visible {
-        display: block; 
-        
+        display: block;
+
     }
 
     #menu {
@@ -393,5 +509,1609 @@ nav ul li a:hover::after {
         justify-content: center;
         text-align: center;
         animation: slide-in 1s ease forwards;
+    }
+}
+
+@media screen and (min-width: 427px) and (max-width: 550px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #navbar-default {
+        display: none;
+    }
+
+    #navbar-mobile {
+        display: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-icon-mobile {
+        padding: 25px 0 0 20px;
+    }
+
+    .menu-icon-mobile.rotate {
+        animation: rotation 0.5s ease forwards;
+    }
+
+    .menu-icon-mobile.rotate-back {
+        animation: rotation-back 0.5s ease forwards;
+    }
+
+    /* Estilos del menú */
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    #menu-desplegable.visible {
+        display: block;
+
+    }
+
+    #menu {
+        position: fixed;
+        top: 3.3em;
+        left: 0;
+        width: 100%;
+        height: 11%;
+        z-index: 4;
+        background-color: #000000;
+        color: #fff;
+        padding: 1em;
+        animation: slide-in-nav 0.5s ease forwards;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu li {
+        margin-bottom: 20px;
+    }
+
+    #menu a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #menu ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    /* header */
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 600px) {
+
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 700px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 800px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 900px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1000px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1023px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1152px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
+
+@media only screen and (min-width: 1152px) and (max-width: 1279px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        display: none;
+    }
+
+    .header-container-mobile {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: slide-in 1s ease forwards;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+        width: 65VW;
+        height: 17vh;
+        display: flex;
+        align-items: center;
+        animation: slide-in 1s ease forwards;
+    }
+
+    .text-header {
+        font-size: 1.9rem;
+        margin-left: 50px;
+        padding: 0 20px;
+    }
+
+}
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+        width: 65VW;
+        height: 17vh;
+        display: flex;
+        align-items: center;
+        animation: slide-in 1s ease forwards;
+    }
+
+    .text-header {
+        font-size: 1.9rem;
+        margin-left: 50px;
+        padding: 0 20px;
+    }
+
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+        width: 65VW;
+        height: 17vh;
+        display: flex;
+        align-items: center;
+        animation: slide-in 1s ease forwards;
+    }
+
+    .text-header {
+        font-size: 1.9rem;
+        margin-left: 50px;
+        padding: 0 20px;
+    }
+
+}
+@media only screen and (min-width: 1920px) and (max-width: 2000px) {
+    #navbar-mobile {
+        display: none;
+    }
+
+    #menu-desplegable {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        color: whitesmoke;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        animation: slide-in-nav 0.5s ease forwards;
+    }
+
+    nav .logo {
+        display: flex;
+        font-size: xx-large;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar los elementos ::before y ::after */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: whitesmoke;
+        position: relative;
+        /* Agregamos posicionamiento relativo para poder posicionar el subrayado con posición absoluta */
+    }
+
+    nav ul li a:hover {
+        color: #CDA434;
+
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 1em;
+        left: 50%;
+        background-color: #CDA434;
+        transition: all 0.4s ease-in-out;
+        /* Agregamos una transición suave para la animación */
+    }
+
+    nav ul li a::before {
+        transform: translateX(-30%);
+        /* Colocamos el elemento ::before en la mitad izquierda del texto */
+    }
+
+    nav ul li a::after {
+        transform: translateX(-70%);
+        /* Colocamos el elemento ::after en la mitad derecha del texto */
+    }
+
+    nav ul li a:hover::before,
+    nav ul li a:hover::after {
+        width: 50%;
+        /* Hacemos que los elementos ::before y ::after tengan el 50% de la longitud del texto */
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-span-container {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 3;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+        width: 65VW;
+        height: 17vh;
+        display: flex;
+        align-items: center;
+        animation: slide-in 1s ease forwards;
+    }
+
+    .text-header {
+        font-size: 1.9rem;
+        margin-left: 50px;
+        padding: 0 20px;
     }
 }
